@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 4b - Q3: Native JavaScript vs jQuery</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    .myStyle { background-color: coral; padding: 16px; }
+    #myElement, #myDIV, #myButton { margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Native JavaScript vs jQuery</h1>
+
+  <div id="myElement">Original Text</div>
+
+  <div id="myDIV"><p>I am a myDIV.</p></div>
+
+  <button id="myButton">Click me</button>
+
+  <!-- jQuery 4.0.0 official full build (not slim) -->
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script>
+    $(function () {
+      // (a) document.getElementById("myElement").textContent = "Modified Text";
+      $("#myElement").text("Modified Text");
+
+      // (b) document.querySelector("#myDIV").classList.add("myStyle");
+      $("#myDIV").addClass("myStyle");
+
+      // (c) document.getElementById("myButton").addEventListener("click", () => alert("Button clicked!"));
+      $("#myButton").on("click", function () {
+        alert("Button clicked!");
+      });
+    });
+  </script>
+</body>
+</html>

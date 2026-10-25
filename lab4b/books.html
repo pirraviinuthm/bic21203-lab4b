@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Books Data</h1>
+
+  <h2>(a) Title of the first book</h2>
+  <p id="firstTitle"></p>
+
+  <h2>(b) Author of the second book</h2>
+  <p id="secondAuthor"></p>
+
+  <h2>(c) Genres of both books</h2>
+  <ul id="genreList"></ul>
+
+  <p id="error" class="error"></p>
+
+  <script>
+    async function showBooks() {
+      try {
+        // 1. Get the JSON file
+        const response = await fetch("books.json");
+
+        // 2. Turn it into a JavaScript object
+        const data = await response.json();
+
+        // 3. (a) Title of the first book
+        document.getElementById("firstTitle").textContent = data.books[0].title;
+
+        // 4. (b) Author of the second book
+        document.getElementById("secondAuthor").textContent = data.books[1].author;
+
+        // 5. (c) Genres of both books, grouped by title
+        for (let i = 0; i < data.books.length; i++) {
+          const book = data.books[i];
+          const li = document.createElement("li");
+          li.textContent = book.title + " — " + book.genres.join(", ");
+          document.getElementById("genreList").appendChild(li);
+        }
+      } catch (error) {
+        // If anything goes wrong, show a message on the page
+        document.getElementById("error").textContent =
+          "Sorry, the book data could not be loaded.";
+      }
+    }
+
+    showBooks();
+  </script>
+</body>
+</html>
