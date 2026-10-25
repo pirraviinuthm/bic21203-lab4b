@@ -36,7 +36,7 @@ python3 -m http.server 8000
 
 ## Screenshots
 
-(screenshots/q1-books-json.png)
-(screenshots/q2-books-html.png)
-(screenshots/q2-error-handling.png)
-(screenshots/q3-jquery-dom.png)
+![Q1 books.json](lab4b/screenshots/q1-books-json.png)
+![Q2 books.html](lab4b/screenshots/q2-books-html.png)
+![Q2 error handling](lab4b/screenshots/q2-error-handling.png)
+![Q3 jquery-dom.html](lab4b/screenshots/q3-jquery-dom.png)
