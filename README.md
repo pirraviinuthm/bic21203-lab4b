@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33927650/README.md)
 # BIC21203 Lab 4B - Client-Side Scripting (JSON and jQuery)
 
 ## Student details
@@ -37,7 +36,7 @@ python3 -m http.server 8000
 
 ## Screenshots
 
-![Q1 books.json](screenshots/q1-books-json.png)
-![Q2 books.html](screenshots/q2-books-html.png)
-![Q2 error handling](screenshots/q2-error-handling.png)
-![Q3 jquery-dom.html](screenshots/q3-jquery-dom.png)
+(screenshots/q1-books-json.png)
+(screenshots/q2-books-html.png)
+(screenshots/q2-error-handling.png)
+(screenshots/q3-jquery-dom.png)
